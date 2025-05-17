@@ -1,16 +1,12 @@
 import Navbar from "../components/Navbar"
-import { SessionProvider } from 'next-auth/react';
-import {MantineProvider} from "@mantine/core"
+import {Providers} from "../Providers"
 export default function Layout ({ children} : Readonly<{children : React.ReactNode}>){
     return(
         <main>
-            <MantineProvider>
-                <SessionProvider>
-                    <Navbar/>
-                    {children}
-                </SessionProvider>
-            </MantineProvider>
-
+            <Providers>
+                <Navbar/>
+                {children}
+            </Providers>
         </main>
     )
 }

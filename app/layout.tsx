@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {MantineProvider} from "@mantine/core";
+import { Providers } from "./Providers";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -26,9 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <MantineProvider>
+        <Providers>
           {children}
-        </MantineProvider>
+        </Providers>
       </body>
     </html>
   );
