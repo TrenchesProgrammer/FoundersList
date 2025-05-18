@@ -2,7 +2,7 @@ import {Box, Text} from '@mantine/core'
 import HeroTitle from '../components/HeroTitle';
 import Search from '../components/Search'
 export default async function Home({searchParams}: {searchParams: Promise<{query?:string}>}) {
-  const query = (await searchParams).query;
+  const query = (await searchParams).query || '';
   return (
 <Box
   px="lg" 

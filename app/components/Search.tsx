@@ -1,6 +1,5 @@
 import Form from 'next/form'
 import '../globals.css'
-import { Box } from '@mantine/core'
 import SearchFormReset from './SearchFormReset'
 import {IconSearch} from '@tabler/icons-react'
 const Search = ({query}: {query?:string}) => {
@@ -9,15 +8,13 @@ const Search = ({query}: {query?:string}) => {
     <Form className='search-form' style={{width:'450px'}} action='/' scroll={false}>
         <input
             className='search-form-input'     
-            name=''
-            defaultValue={query}
+            name='query'
             placeholder='Search Startups'
          />
              {query && <SearchFormReset/>}
-        <button className='search-btn' type='submit'>
+        <button style={{alignSelf:'flex-end'}} className='search-btn' type='submit'>
             <IconSearch size={20} color={'white'}/>
         </button>
-         <Box></Box>
     </Form>
   )
 }

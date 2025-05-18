@@ -8,9 +8,9 @@ const SearchFormReset = () => {
     }
 return (
     <button className='search-btn' type='reset' onClick={reset}>
-        {/* <Link href='/'  > */}
+        <Link href='/'  >
             x
-        {/* </Link> */}
+        </Link>
     </button>
 )
 }
