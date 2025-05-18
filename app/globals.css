@@ -23,3 +23,36 @@ a {
   text-decoration: none;
 }
 
+.search-form{
+  background-color: white;
+  padding: 0.5rem ;
+  border: 3px solid black;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  width: 100%;
+}
+.search-form-input{
+  border: none;
+  font-weight: bolder;
+  width: 80%;
+}
+.search-form-input::placeholder{
+  /* color: black; */
+  font-weight: bolder;
+}
+.search-form-input:focus{
+  outline: none;
+}
+.search-btn{
+  background-color: black;
+  border-radius: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  height: 40px;
+  width:40px;
+  margin-left: 5px;
+}

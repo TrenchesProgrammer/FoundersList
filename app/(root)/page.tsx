@@ -1,9 +1,12 @@
 import {Box, Text} from '@mantine/core'
 import HeroTitle from '../components/HeroTitle';
-export default function Home() {
+import Search from '../components/Search'
+export default async function Home({searchParams}: {searchParams: Promise<{query?:string}>}) {
+  const query = (await searchParams).query;
   return (
 <Box
-  px="lg"
+  px="lg" 
+  py="xl"
   style={{
     backgroundColor: '#3b82f6', // or use Mantine's theme.colorScheme if dynamic
     backgroundImage: `repeating-linear-gradient(
@@ -23,7 +26,8 @@ export default function Home() {
 >
 
       <HeroTitle text="Pitch your startup, connect with entrepreneurs"/>
-      <Text c={'white'} fz={'lg'}>Submit Ideas, vote on pitches and get noticed in virtual Competitions </Text>
+      <Text ta={'center'} c={'white'} fz={'lg'}>Submit Ideas, vote on pitches and get noticed in virtual Competitions </Text>
+      <Search query={query}/>
     </Box>
   );
 }
