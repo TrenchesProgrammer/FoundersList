@@ -56,3 +56,20 @@ a {
   width:40px;
   margin-left: 5px;
 }
+.startup-card{
+  padding: 10px;
+  border-radius: 20px;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+  max-width: 350px;
+}
+.startup-card:hover{
+    border-top: 3px solid #3b82f6;
+  border-left: 3px solid #3b82f6;
+  border-right: 5px solid #3b82f6;
+  border-bottom: 5px solid #3b82f6;
+  box-shadow: 0 0 10px #3b82f6;
+  background-color: #e0ebfd;
+}
